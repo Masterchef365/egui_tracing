@@ -124,7 +124,7 @@ impl Widget for Logs {
                         let message = event.fields.get("message").unwrap();
 
                         ui.style_mut().visuals.override_text_color = Some(Color32::WHITE);
-                        ui.add(Label::new(message).wrap(false))
+                        ui.add(Label::new(message).extend())
                             .on_hover_text(message);
                     })
                     .show(ui);
